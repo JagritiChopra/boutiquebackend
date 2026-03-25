@@ -8,7 +8,7 @@ const seed = async () => {
   await mongoose.connect(process.env.MONGO_URI);
   console.log("Connected to DB");
 
-  const existing = await User.findOne({ email: "admin@boutique.com" });
+  const existing = await User.findOne({ email: "admin@chintpurni.boutique.com" });
   if (existing) {
     console.log("Admin already exists. Exiting.");
     process.exit(0);
